@@ -1,22 +1,24 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/solarized.css" id="theme">
+        <title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/dzf.css" id="highlight-theme">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
+        <link rel="stylesheet" href="dist/reset.css">
+        <link rel="stylesheet" href="dist/reveal.css">
+        <link rel="stylesheet" href="dist/theme/dzf_theme.css" id="theme">
+
+        <!-- Theme used for syntax highlighted code -->
+        <link rel="stylesheet" href="plugin/highlight/dzf.css" id="highlight-theme">
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
                     <pre><code data-line-numbers data-trim>
                     int main() {
                         ReadGraph();
@@ -33,25 +35,154 @@
                         return 0;
                     }</code></pre>
                 </section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+                <section>
+                    <section>
+                        <h2>
+                            斐波那契堆
+                        </h2>
+                    </section>
+                    <section data-auto-animate data-auto-animate-unmatched="fade">
+                        <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
+                        <h3>节点 Node</h3>
+                        <embed src="assets/fib_node.svg" height="400">
+                    </section>
+                    <section data-auto-animate data-auto-animate-unmatched="fade">
+                        <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
+                        <h3>一个实例</h3>
+                        <embed data-id="fib_inst" src="assets/fib_fib.svg" height="400">
+                    </section>
+                    <section data-auto-animate data-auto-animate-unmatched="fade">
+                        <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
+                        <h3>Push(key)</h3>
+                        <embed data-id="fib_inst" src="assets/fib_push.svg" height="400">
+                    </section>
+                    <section data-auto-animate data-auto-animate-unmatched="fade">
+                        <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
+                        <h3>Pop()</h3>
+                        <embed data-id="fib_inst" src="assets/fib_pop.svg" height="400">
+                    </section>
+                    <section data-auto-animate data-auto-animate-unmatched="fade">
+                        <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
+                        <h3>Pop()</h3>
+                        <p data-id="fib_step">1. 切断孩子</p>
+                        <embed data-id="fib_inst" src="assets/fib_cut.svg" height="400">
+                    </section>
+                    <section data-auto-animate data-auto-animate-unmatched="fade">
+                        <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
+                        <h3>Pop()</h3>
+                        <p data-id="fib_step">2. 替补顶层</p>
+                        <embed data-id="fib_inst" src="assets/fib_link.svg" height="300">
+                    </section>
+                    <section data-auto-animate data-auto-animate-unmatched="fade">
+                        <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
+                        <h3>Pop()</h3>
+                        <p data-id="fib_step">3. 顶层度数相同的，贪心地合并</p>
+                        <embed data-id="fib_inst" src="assets/fib_merge_1.svg" height="300">
+                    </section>
+                    <section data-auto-animate data-auto-animate-unmatched="fade">
+                        <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
+                        <h3>Pop()</h3>
+                        <p data-id="fib_step">3. 顶层度数相同的，贪心地合并</p>
+                        <embed data-id="fib_inst" src="assets/fib_merge_2.svg" height="300">
+                    </section>
+                    <section data-auto-animate data-auto-animate-unmatched="fade">
+                        <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
+                        <h3>Pop()</h3>
+                        <p data-id="fib_step">3. 顶层度数相同的，贪心地合并</p>
+                        <embed data-id="fib_inst" src="assets/fib_merge_3.svg" height="300">
+                    </section>
+                    <section data-auto-animate data-auto-animate-unmatched="fade">
+                        <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
+                        <h3>Pop()</h3>
+                        <p data-id="fib_step">3. 顶层度数相同的，贪心地合并</p>
+                        <embed data-id="fib_inst" src="assets/fib_merge_4.svg" height="300">
+                    </section>
+                    <section data-auto-animate data-auto-animate-unmatched="fade">
+                        <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
+                        <h3>Pop()</h3>
+                        <p data-id="fib_step">3. 顶层度数相同的，贪心地合并</p>
+                        <embed data-id="fib_inst" src="assets/fib_merge_5.svg" height="300">
+                    </section>
+                    <section data-auto-animate data-auto-animate-unmatched="fade">
+                        <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
+                        <h3>Pop()</h3>
+                        <p data-id="fib_step">3. 顶层度数相同的，贪心地合并</p>
+                        <embed data-id="fib_inst" src="assets/fib_merge_6.svg" height="400">
+                    </section>
+                    <section data-auto-animate data-auto-animate-unmatched="fade">
+                        <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
+                        <h3>Pop()</h3>
+                        <p data-id="fib_step">4. 选取Min Node</p>
+                        <embed data-id="fib_inst" src="assets/fib_min.svg" height="400">
+                    </section>
+                    <section>
+                        <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
+                        <h3>复杂度</h3>
+                        <div class="r-hstack" style=" background: #fdfdf3a8; padding: 0.2em; border:2px solid #666;">
+                            <div style="text-align: left;">
+                                <p>节点最大度数</p>
+                                <p>$degree(x)&lt;\lfloor \lg{n} \rfloor$</p>
+                            </div>
+                            <p style="font-size: larger">&emsp;|&emsp;</p>
+                            <div style="text-align: left;">
+                                <p>均摊时间</p>
+                                <p>Push(): $\Theta(1)$</p>
+                                <p>Top(): $\Theta(1)$</p>
+                                <p>Pop(): $O(\lg n)$</p>
+                            </div>
+                            <p style="font-size: larger">&emsp;|&emsp;</p>
+                            <div style="text-align: left;">
+                                <p>空间</p>
+                                <p>$O(n)$</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <small style="font-size: medium;">参考：<a href="https://www.jianshu.com/p/9c6949cca959">jianshu.com/p/9c6949cca959</a></small>
+                    </section>
+                </section>
+                <section>
+                    <section data-auto-animate data-auto-animate-unmatched="fade">
+                        <h3>Auto-Animate Example</h3>
+                        <p>This will fade out</p>
+                        <img src="assets/image1.png" style="height: 100px;">
+                        <pre data-id="code"><code data-line-numbers class="hljs" data-trim>
+						function Example() {
+						  const [count, setCount] = useState(0);
+						}
+					</code></pre>
+                    </section>
+                    <section data-auto-animate data-auto-animate-unmatched="fade">
+                        <h3>Auto-Animate Example</h3>
+                        <p style="opacity: 0.2; margin-top: 100px;">This will fade out</p>
+                        <p>This element is unmatched</p>
+                        <img src="assets/image1.png" style="height: 150px;">
+                        <pre data-id="code"><code data-line-numbers class="hljs" data-trim>
+						function Example() {
+						  New line!
+						  const [count, setCount] = useState(0);
+						}
+					</code></pre>
+                    </section>
+                </section>
+            </div>
+        </div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script src="plugin/math/math.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+        <script src="dist/reveal.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        <script src="plugin/markdown/markdown.js"></script>
+        <script src="plugin/highlight/highlight.js"></script>
+        <script src="plugin/math/math.js"></script>
+        <script>
+            // More info about initialization & config:
+            // - https://revealjs.com/initialization/
+            // - https://revealjs.com/config/
+            Reveal.initialize({
+                hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
-			});
-		</script>
-	</body>
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath]
+            });
+        </script>
+    </body>
+
 </html>
