@@ -8,15 +8,31 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="dist/theme/solarized.css" id="theme">
 
 		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="plugin/highlight/dzf.css" id="highlight-theme">
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
+				<section>
+                    <pre><code data-line-numbers data-trim>
+                    int main() {
+                        ReadGraph();
+
+                        Work("Binary Heap",
+                            new BinaryHeap&lt;VertexDist, MAX_EDGE&gt;);   
+
+                        Work("Leftist Heap",
+                            new LeftistHeap&lt;VertexDist, MAX_EDGE&gt;);  
+
+                        Work("Fibonacci Heap",
+                            new FibonacciHeap&lt;VertexDist, MAX_EDGE&gt;);
+
+                        return 0;
+                    }</code></pre>
+                </section>
 				<section>Slide 2</section>
 			</div>
 		</div>
@@ -25,6 +41,7 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -33,7 +50,7 @@
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
 			});
 		</script>
 	</body>

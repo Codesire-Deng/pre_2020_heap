@@ -35,7 +35,14 @@
 					<h3>The HTML Presentation Framework</h3>
 					<p>
 						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> and <a href="https://github.com/hakimel/reveal.js/graphs/contributors">contributors</a></small>
-					</p>
+                    </p>
+                    <pre><code>
+                    <script type="text/template">
+                    sealed class Either<out A, out B> {
+                        data class Left<out A>(val a: A) : Either<A, Nothing>()
+                        data class Right<out B>(val b: B) : Either<Nothing, B>()
+                    }
+                    </script></code></pre>
 				</section>
 
 				<section>
