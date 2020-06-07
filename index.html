@@ -75,6 +75,64 @@
                     </section>
                 </section>
 
+                <section>
+                    <section>
+                        <h2>二叉堆</h2>
+                    </section>
+                    <section data-auto-animate data-auto-animate-unmatched="fade">
+                        <div data-id="hp" style="text-align: left; width: inherit;"><small>二叉堆</small></div>
+                        <h3>Push()</h3>
+                        <embed data-id="heap_inst" src="assets/heap_init.svg" height="400">
+                    </section>
+                    <section data-auto-animate data-auto-animate-unmatched="fade">
+                        <div data-id="hp" style="text-align: left; width: inherit;"><small>二叉堆</small></div>
+                        <h3>Push()</h3>
+                        <p>up</p>
+                        <embed data-id="heap_inst" src="assets/heap_init.svg" height="400">
+                    </section>
+                    <section data-auto-animate data-auto-animate-unmatched="fade">
+                        <div data-id="hp" style="text-align: left; width: inherit;"><small>二叉堆</small></div>
+                        <h3>Push()</h3>
+                        <p>up</p>
+                        <embed src="assets/heap_up_1.svg" height="400">
+                    </section>
+                    <section data-auto-animate data-auto-animate-unmatched="fade">
+                        <div data-id="hp" style="text-align: left; width: inherit;"><small>二叉堆</small></div>
+                        <h3>Push()</h3>
+                        <p>up</p>
+                        <embed src="assets/heap_up_2.svg" height="400">
+                    </section>
+                    <section data-auto-animate data-auto-animate-unmatched="fade">
+                        <div data-id="hp" style="text-align: left; width: inherit;"><small>二叉堆</small></div>
+                        <h3>Pop()</h3>
+                        <p>1. 交换首尾值</p>
+                        <embed src="assets/heap_del_sw.svg" height="400">
+                    </section>
+                    <section data-auto-animate data-auto-animate-unmatched="fade">
+                        <div data-id="hp" style="text-align: left; width: inherit;"><small>二叉堆</small></div>
+                        <h3>Pop()</h3>
+                        <p>2. down</p>
+                        <embed src="assets/heap_dw_1.svg" height="400">
+                    </section>
+                    <section>
+                        <div data-id="hp" style="text-align: left; width: inherit;"><small>二叉堆</small></div>
+                        <h3>复杂度</h3>
+                        <div class="r-hstack" style=" background: #fdfdf3a8; padding: 0.2em; border:2px solid #666;">
+                            <div style="text-align: left;">
+                                <p>时间</p>
+                                <p>Push(): $O(\lg n)$</p>
+                                <p>Top(): $\Theta(1)$</p>
+                                <p>Pop(): $O(\lg n)$</p>
+                            </div>
+                            <div style="background-color: #aaa; height: 5em; width: 2px; margin: 1em;"></div>
+
+                            <div style="text-align: left;">
+                                <p>空间</p>
+                                <p>$O(n)$</p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
 
                 <section>
                     <section>
@@ -173,6 +231,24 @@
                         <p>实际上也可以被归结为合并操作</p>
                     </section>
 
+                    <section>
+                        <div data-id="lefh" style="text-align: left; width: inherit;"><small>左偏树</small></div>
+                        <h3>复杂度</h3>
+                        <div class="r-hstack" style=" background: #fdfdf3a8; padding: 0.2em; border:2px solid #666;">
+                            <div style="text-align: left;">
+                                <p>均摊时间</p>
+                                <p>Push(): $O(\lg n)$</p>
+                                <p>Top(): $\Theta(1)$</p>
+                                <p>Pop(): $O(\lg n)$</p>
+                            </div>
+                            <div style="background-color: #aaa; height: 5em; width: 2px; margin: 1em;"></div>
+                            <div style="text-align: left;">
+                                <p>空间</p>
+                                <p>$O(n)$</p>
+                            </div>
+                        </div>
+                    </section>
+
                 </section>
 
                 <section>
@@ -189,71 +265,77 @@
                     <section data-auto-animate data-auto-animate-unmatched="fade">
                         <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
                         <h3>一个实例</h3>
-                        <embed data-id="fib_inst" src="assets/fib_fib.svg" height="400">
+                        <embed src="assets/fib_fib.svg" height="400">
                     </section>
                     <section data-auto-animate data-auto-animate-unmatched="fade">
                         <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
                         <h3>Push(key)</h3>
-                        <embed data-id="fib_inst" src="assets/fib_push.svg" height="400">
+                        <embed src="assets/fib_push.svg" height="400">
                     </section>
                     <section data-auto-animate data-auto-animate-unmatched="fade">
                         <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
                         <h3>Pop()</h3>
-                        <embed data-id="fib_inst" src="assets/fib_pop.svg" height="400">
+                        <embed src="assets/fib_pop.svg" height="400">
                     </section>
                     <section data-auto-animate data-auto-animate-unmatched="fade">
                         <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
                         <h3>Pop()</h3>
                         <p data-id="fib_step">1. 切断孩子</p>
-                        <embed data-id="fib_inst" src="assets/fib_cut.svg" height="400">
+                        <embed src="assets/fib_pop.svg" height="400">
+                    </section>
+                    <section data-auto-animate data-auto-animate-unmatched="fade">
+                        <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
+                        <h3>Pop()</h3>
+                        <p data-id="fib_step">1. 切断孩子</p>
+                        <embed src="assets/fib_cut.svg" height="400">
                     </section>
                     <section data-auto-animate data-auto-animate-unmatched="fade">
                         <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
                         <h3>Pop()</h3>
                         <p data-id="fib_step">2. 替补顶层</p>
-                        <embed data-id="fib_inst" src="assets/fib_link.svg" height="300">
+                        <embed src="assets/fib_link.svg" height="300">
                     </section>
                     <section data-auto-animate data-auto-animate-unmatched="fade">
                         <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
                         <h3>Pop()</h3>
                         <p data-id="fib_step">3. 顶层度数相同的，贪心地合并</p>
-                        <embed data-id="fib_inst" src="assets/fib_merge_1.svg" height="300">
+                        <embed src="assets/fib_merge_1.svg" height="300">
                     </section>
                     <section data-auto-animate data-auto-animate-unmatched="fade">
                         <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
                         <h3>Pop()</h3>
                         <p data-id="fib_step">3. 顶层度数相同的，贪心地合并</p>
-                        <embed data-id="fib_inst" src="assets/fib_merge_2.svg" height="300">
+                        <embed src="assets/fib_merge_2.svg" height="300">
                     </section>
                     <section data-auto-animate data-auto-animate-unmatched="fade">
                         <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
                         <h3>Pop()</h3>
                         <p data-id="fib_step">3. 顶层度数相同的，贪心地合并</p>
-                        <embed data-id="fib_inst" src="assets/fib_merge_3.svg" height="300">
+                        <embed src="assets/fib_merge_3.svg" height="300">
                     </section>
                     <section data-auto-animate data-auto-animate-unmatched="fade">
                         <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
                         <h3>Pop()</h3>
                         <p data-id="fib_step">3. 顶层度数相同的，贪心地合并</p>
-                        <embed data-id="fib_inst" src="assets/fib_merge_4.svg" height="300">
+                        <embed src="assets/fib_merge_4.svg" height="300">
                     </section>
                     <section data-auto-animate data-auto-animate-unmatched="fade">
                         <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
                         <h3>Pop()</h3>
                         <p data-id="fib_step">3. 顶层度数相同的，贪心地合并</p>
-                        <embed data-id="fib_inst" src="assets/fib_merge_5.svg" height="300">
+                        <embed src="assets/fib_merge_5.svg" height="300">
                     </section>
                     <section data-auto-animate data-auto-animate-unmatched="fade">
                         <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
                         <h3>Pop()</h3>
                         <p data-id="fib_step">3. 顶层度数相同的，贪心地合并</p>
-                        <embed data-id="fib_inst" src="assets/fib_merge_6.svg" height="400">
+                        <embed src="assets/fib_merge_6.svg" height="400">
                     </section>
                     <section data-auto-animate data-auto-animate-unmatched="fade">
                         <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
                         <h3>Pop()</h3>
                         <p data-id="fib_step">4. 选取Min Node</p>
-                        <embed data-id="fib_inst" src="assets/fib_min.svg" height="400">
+                        <embed src="assets/fib_min.svg" height="400">
                     </section>
                     <section>
                         <div data-id="fib" style="text-align: left; width: inherit;"><small>斐波那契堆</small></div>
@@ -263,14 +345,14 @@
                                 <p>节点最大度数</p>
                                 <p>$degree(x)&lt;\lfloor \lg{n} \rfloor$</p>
                             </div>
-                            <p style="font-size: larger">&nbsp;|&nbsp;</p>
+                            <div style="background-color: #aaa; height: 5em; width: 2px; margin: .5em;"></div>
                             <div style="text-align: left;">
                                 <p>均摊时间</p>
                                 <p>Push(): $\Theta(1)$</p>
                                 <p>Top(): $\Theta(1)$</p>
                                 <p>Pop(): $O(\lg n)$</p>
                             </div>
-                            <p style="font-size: larger">&nbsp;|&nbsp;</p>
+                            <div style="background-color: #aaa; height: 5em; width: 2px; margin: .5em;"></div>
                             <div style="text-align: left;">
                                 <p>空间</p>
                                 <p>$O(n)$</p>
