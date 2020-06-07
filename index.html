@@ -20,6 +20,63 @@
             <div class="slides">
 
                 <section>
+                    <h1>堆优化最短路</h1>
+                    <p>Shortest Path Algorithm with Heaps</p>
+                    <div style="text-align: right; width: inherit; ">
+                        <small>
+                            <p style="line-height: .5em;">邓子烽</p>
+                            <p style="line-height: .5em;">宋庭聿</p>
+                            <p style="line-height: .5em;">尹浩霖</p>
+                        </small>
+                    </div>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>背景</h2>
+                    </section>
+                    <section>
+                        <div data-id="bg" style="text-align: left; width: inherit;"><small>背景</small></div>
+                        <h3>单源最短路径</h3>
+                        <embed src="assets/dis_inst.svg">
+                    </section>
+                    <section>
+                        <h3>堆优化 Dijkistra 算法</h3>
+                        <pre><code class="c" data-trim data-line-numbers="|2|3,4|3,6-11|5,9">
+                        Dijkstra(V, E, src) {
+                            heap.push(src);
+                            while (|heap| > 0) {
+                                v = heap.top();
+                                heap.pop();
+                                for all edge e start from v {
+                                    if v.distance + e.length < e.end.distance {
+                                        slack e.end.distance;
+                                        heap.push(e.end);
+                                    }
+                                }
+                            }
+                        }
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h3>堆（优先队列）</h3>
+                        <pre><code class="cxx" data-trim data-line-numbers="1-6|">
+                        class PriorityQueue &lt;key_type&gt; {
+                            key_type Top();
+                            void Push(const key_type& x);
+                            void Pop();
+                            size_t Size();
+                        };
+                        
+                        class BinaryHeap : PriorityQueue;
+                        class LeftistHeap : PriorityQueue;
+                        class FibonacciHeap : PriorityQueue;
+                        </code></pre>
+                    </section>
+                </section>
+
+
+                <section>
                     <section>
                         <h2>左偏树</h2>
                     </section>
@@ -34,15 +91,16 @@
                     <section>
                         <div data-id="lefh" style="text-align: left; width: inherit;"><small>左偏树</small></div>
                         <h3>操作</h3>
-						<p>合并</p>
-						<p>插入</p>
-						<p>插入</p>
-						<p>合并最小值</p>
+                        <p>合并</p>
+                        <p>插入</p>
+                        <p>插入</p>
+                        <p>合并最小值</p>
                     </section>
 
                     <section>
+                        <div data-id="lefh" style="text-align: left; width: inherit;"><small>左偏树</small></div>
                         <h3>合并 —— 伪代码</h3>
-                        <pre><code data-trim data-line-numbers="3-5|7-8|9-11">
+                        <pre><code class="cxx" data-trim data-line-numbers="3-5|7-8|9-11">
                         Merge1( PriorityQueue H1, PriorityQueue H2 )
                         {
                             /* single node */
@@ -61,50 +119,58 @@
                     </section>
 
                     <section>
+                        <div data-id="lefh" style="text-align: left; width: inherit;"><small>左偏树</small></div>
                         <h3>Example🌰</h3>
                         <p>如下两棵树需要被合并</p>
-                        <img src="Animation/LeftestHeap/leftestHeap_0.png" width="550" style="opacity: .9;"/>
+                        <img src="Animation/LeftestHeap/leftestHeap_0.png" width="550" style="opacity: .9;" />
                     </section>
 
                     <section data-transition="fade">
-                        <img src="Animation/LeftestHeap/leftestHeap_1.png" width="550" style="opacity: .9;"/>
+                        <div data-id="lefh" style="text-align: left; width: inherit;"><small>左偏树</small></div>
+                        <img src="Animation/LeftestHeap/leftestHeap_1.png" width="550" style="opacity: .9;" />
                     </section>
 
                     <section data-transition="fade">
-                        <img src="Animation/LeftestHeap/leftestHeap_2.png" width="550" style="opacity: .9;"/>
+                        <div data-id="lefh" style="text-align: left; width: inherit;"><small>左偏树</small></div>
+                        <img src="Animation/LeftestHeap/leftestHeap_2.png" width="550" style="opacity: .9;" />
                     </section>
 
                     <section data-transition="fade">
-                        <img src="Animation/LeftestHeap/leftestHeap_3.png" width="550" style="opacity: .9;"/>
+                        <div data-id="lefh" style="text-align: left; width: inherit;"><small>左偏树</small></div>
+                        <img src="Animation/LeftestHeap/leftestHeap_3.png" width="550" style="opacity: .9;" />
                     </section>
 
                     <section data-transition="fade">
-                        <img src="Animation/LeftestHeap/leftestHeap_4.png" width="550" style="opacity: .9;"/>
+                        <div data-id="lefh" style="text-align: left; width: inherit;"><small>左偏树</small></div>
+                        <img src="Animation/LeftestHeap/leftestHeap_4.png" width="550" style="opacity: .9;" />
                     </section>
 
                     <section data-transition="fade">
-                        <img src="Animation/LeftestHeap/leftestHeap_5.png" width="550" style="opacity: .9;"/>
+                        <div data-id="lefh" style="text-align: left; width: inherit;"><small>左偏树</small></div>
+                        <img src="Animation/LeftestHeap/leftestHeap_5.png" width="550" style="opacity: .9;" />
                     </section>
 
                     <section data-transition="fade">
-                        <img src="Animation/LeftestHeap/leftestHeap_6.png" width="550" style="opacity: .9;"/>
+                        <div data-id="lefh" style="text-align: left; width: inherit;"><small>左偏树</small></div>
+                        <img src="Animation/LeftestHeap/leftestHeap_6.png" width="550" style="opacity: .9;" />
                     </section>
 
                     <section data-transition="fade">
-                        <img src="Animation/LeftestHeap/leftestHeap_7.png" width="550" style="opacity: .9;"/>
+                        <div data-id="lefh" style="text-align: left; width: inherit;"><small>左偏树</small></div>
+                        <img src="Animation/LeftestHeap/leftestHeap_7.png" width="550" style="opacity: .9;" />
                     </section>
 
                     <section>
+                        <div data-id="lefh" style="text-align: left; width: inherit;"><small>左偏树</small></div>
                         <h3>删除最小值</h3>
                         <p>实际上也是合并</p>
                         <p>在去掉最小值之后，合并剩下的两棵子树</p>
                     </section>
 
-                    <section data-markdown>
-                        <textarea data-template>
-							### 插入
-							实际上也可以被归结为合并操作
-						</textarea>
+                    <section>
+                        <div data-id="lefh" style="text-align: left; width: inherit;"><small>左偏树</small></div>
+                        <h3>插入</h3>
+                        <p>实际上也可以被归结为合并操作</p>
                     </section>
 
                 </section>
@@ -217,7 +283,7 @@
                 </section> <!-- end of 斐波那契堆 -->
 
                 <section>
-                    <pre><code data-line-numbers="2|4-5|7-8|10-11" data-trim>
+                    <pre><code class="cxx"  data-line-numbers="2|4-5|7-8|10-11" data-trim>
                     int main() {
                         ReadGraph();
 
@@ -243,21 +309,21 @@
                         <p>
                             线性回归方程 ｜ 运行时间和单词数
                         </p>
-                        <img src="Animation/Test/Word.png" width="550px" height="360px" style="opacity: .9;"/>
+                        <img src="Animation/Test/Word.png" width="550px" height="360px" style="opacity: .9;" />
                     </section>
 
                     <section>
                         <p>
                             线性回归方程 ｜ 运行时间和映射数
                         </p>
-                        <img src="Animation/Test/Map.jpg" width="550px" height="360px" style="opacity: .9;"/>
+                        <img src="Animation/Test/Map.jpg" width="550px" height="360px" style="opacity: .9;" />
                     </section>
 
                     <section>
                         <p>
                             线性回归方程 ｜ 运行时间和减少数
                         </p>
-                        <img src="Animation/Test/Reduce.jpg" width="550px" height="360px" style="opacity: .9;"/>
+                        <img src="Animation/Test/Reduce.jpg" width="550px" height="360px" style="opacity: .9;" />
                     </section>
                 </section>
 
