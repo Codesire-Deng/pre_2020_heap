@@ -18,23 +18,97 @@
     <body>
         <div class="reveal">
             <div class="slides">
+
                 <section>
-                    <pre><code data-line-numbers data-trim>
-                    int main() {
-                        ReadGraph();
+                    <section>
+                        <h2>左偏树</h2>
+                    </section>
 
-                        Work("Binary Heap",
-                            new BinaryHeap&lt;VertexDist, MAX_EDGE&gt;);   
+                    <section>
+                        <div data-id="lefh" style="text-align: left; width: inherit;"><small>左偏树</small></div>
+                        <h3>两个重要的定义</h3>
+                        <p>Null path length</p>
+                        <p>左偏树的重要性质</p>
+                    </section>
 
-                        Work("Leftist Heap",
-                            new LeftistHeap&lt;VertexDist, MAX_EDGE&gt;);  
+                    <section>
+                        <div data-id="lefh" style="text-align: left; width: inherit;"><small>左偏树</small></div>
+                        <h3>操作</h3>
+						<p>合并</p>
+						<p>插入</p>
+						<p>插入</p>
+						<p>合并最小值</p>
+                    </section>
 
-                        Work("Fibonacci Heap",
-                            new FibonacciHeap&lt;VertexDist, MAX_EDGE&gt;);
+                    <section>
+                        <h3>合并 —— 伪代码</h3>
+                        <pre><code data-trim data-line-numbers="3-5|7-8|9-11">
+                        Merge1( PriorityQueue H1, PriorityQueue H2 )
+                        {
+                            /* single node */
+                            if ( H1->Left == NULL ) 	
+                                H1->Left = H2;
+                            else {
+                                /* Step 1 & 2 */
+                                H1->Right = Merge( H1->Right, H2 ); 
+                                if ( H1->Left->Npl < H1->Right->Npl )
+                                    SwapChildren( H1 );	/* Step 3 */
+                                H1->Npl = H1->Right->Npl + 1;
+                            }
+                            return H1;
+                        }
+                        </code></pre>
+                    </section>
 
-                        return 0;
-                    }</code></pre>
+                    <section>
+                        <h3>Example🌰</h3>
+                        <p>如下两棵树需要被合并</p>
+                        <img src="Animation/LeftestHeap/leftestHeap_0.png" width="550" style="opacity: .9;"/>
+                    </section>
+
+                    <section data-transition="fade">
+                        <img src="Animation/LeftestHeap/leftestHeap_1.png" width="550" style="opacity: .9;"/>
+                    </section>
+
+                    <section data-transition="fade">
+                        <img src="Animation/LeftestHeap/leftestHeap_2.png" width="550" style="opacity: .9;"/>
+                    </section>
+
+                    <section data-transition="fade">
+                        <img src="Animation/LeftestHeap/leftestHeap_3.png" width="550" style="opacity: .9;"/>
+                    </section>
+
+                    <section data-transition="fade">
+                        <img src="Animation/LeftestHeap/leftestHeap_4.png" width="550" style="opacity: .9;"/>
+                    </section>
+
+                    <section data-transition="fade">
+                        <img src="Animation/LeftestHeap/leftestHeap_5.png" width="550" style="opacity: .9;"/>
+                    </section>
+
+                    <section data-transition="fade">
+                        <img src="Animation/LeftestHeap/leftestHeap_6.png" width="550" style="opacity: .9;"/>
+                    </section>
+
+                    <section data-transition="fade">
+                        <img src="Animation/LeftestHeap/leftestHeap_7.png" width="550" style="opacity: .9;"/>
+                    </section>
+
+                    <section>
+                        <h3>删除最小值</h3>
+                        <p>实际上也是合并</p>
+                        <p>在去掉最小值之后，合并剩下的两棵子树</p>
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+							### 插入
+							实际上也可以被归结为合并操作
+						</textarea>
+                    </section>
+
                 </section>
+
                 <section>
                     <section>
                         <h2>
@@ -140,7 +214,53 @@
                         <small style="font-size: medium;">参考：<a
                                 href="https://www.jianshu.com/p/9c6949cca959">jianshu.com/p/9c6949cca959</a></small>
                     </section>
+                </section> <!-- end of 斐波那契堆 -->
+
+                <section>
+                    <pre><code data-line-numbers="2|4-5|7-8|10-11" data-trim>
+                    int main() {
+                        ReadGraph();
+
+                        Work("Binary Heap",
+                            new BinaryHeap&lt;VertexDist, MAX_EDGE&gt;);   
+
+                        Work("Leftist Heap",
+                            new LeftistHeap&lt;VertexDist, MAX_EDGE&gt;);  
+
+                        Work("Fibonacci Heap",
+                            new FibonacciHeap&lt;VertexDist, MAX_EDGE&gt;);
+
+                        return 0;
+                    }</code></pre>
                 </section>
+
+                <section>
+                    <section>
+                        <h2>测试结果与分析</h2>
+                    </section>
+
+                    <section>
+                        <p>
+                            线性回归方程 ｜ 运行时间和单词数
+                        </p>
+                        <img src="Animation/Test/Word.png" width="550px" height="360px" style="opacity: .9;"/>
+                    </section>
+
+                    <section>
+                        <p>
+                            线性回归方程 ｜ 运行时间和映射数
+                        </p>
+                        <img src="Animation/Test/Map.jpg" width="550px" height="360px" style="opacity: .9;"/>
+                    </section>
+
+                    <section>
+                        <p>
+                            线性回归方程 ｜ 运行时间和减少数
+                        </p>
+                        <img src="Animation/Test/Reduce.jpg" width="550px" height="360px" style="opacity: .9;"/>
+                    </section>
+                </section>
+
             </div>
         </div>
 
